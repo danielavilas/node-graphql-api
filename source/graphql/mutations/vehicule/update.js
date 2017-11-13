@@ -24,7 +24,7 @@ export default {
     }).then(data => {
       VehiculeModel.findById(data.id).exec()
     }).catch(err => {
-      new Error('Couldn\'t update vehicule data', err)
+      throw new Error('Couldn\'t update vehicule data', err)
     })
   }
 }

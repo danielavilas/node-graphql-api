@@ -3,13 +3,9 @@ import {
   GraphQLInputObjectType,
   GraphQLNonNull,
   GraphQLString,
-  GraphQLInt,
   GraphQLFloat,
-  GraphQLID,
-  GraphQLList
+  GraphQLID
 } from 'graphql'
-
-import VehiculeModel from '../../models/vehicule'
 
 export const vehiculeType = new GraphQLObjectType({
   name: 'Vehicle',

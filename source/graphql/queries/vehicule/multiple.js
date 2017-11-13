@@ -6,11 +6,10 @@ import VehiculeModel from '../../../models/vehicule'
 
 export default {
   type: new GraphQLList(vehiculeType),
-  resolve(root, params) {
+  resolve() {
     const vehicules = VehiculeModel.find().exec()
-    if (!vehicules) {
-      throw new Error('Error while fetching vehicules...')
-    }
+
+    if (!vehicules) throw new Error('Error while fetching vehicules...')
 
     return vehicules
   }

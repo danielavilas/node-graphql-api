@@ -3,7 +3,7 @@ import {
   GraphQLID
 } from 'graphql'
 
-import { vehiculeType, vehiculeInputType } from '../../types/vehicule'
+import { vehiculeType } from '../../types/vehicule'
 import VehiculeModel from '../../../models/vehicule'
 
 export default {
@@ -16,9 +16,8 @@ export default {
   },
   resolve(root, params) {
     const removedVehicule = VehiculeModel.findByIdAndRemove(params.id).exec()
-    if (!removedVehicule) {
-      throw new Error('Error removing vehicule')
-    }
+
+    if (!removedVehicule) throw new Error('Error removing vehicule')
 
     return removedVehicule
   }
