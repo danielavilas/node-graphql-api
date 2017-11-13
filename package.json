@@ -4,7 +4,7 @@
   "description": "NodeJS Server",
   "main": "server.mjs",
   "scripts": {
-    "start": "nodemon --experimental-modules server.mjs",
+    "start": "nodemon server.js --exec babel-node --presets es2015,stage-2",
     "test": "./node_modules/.bin/eslint '**/*.*js'"
   },
   "repository": {
@@ -23,9 +23,15 @@
   },
   "homepage": "https://github.com/danielavilas/server#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.11.7",
+    "mongoose": "^4.13.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "eslint": "^4.10.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
