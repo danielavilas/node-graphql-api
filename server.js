@@ -9,6 +9,7 @@ import config from './source/config'
 const app = express()
 const PORT = 8000
 
+mongoose.Promise = global.Promise
 mongoose.connect(config.mongodb.uri, {
   useMongoClient: true
 })

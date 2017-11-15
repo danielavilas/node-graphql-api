@@ -14,6 +14,10 @@ export default {
     }
   },
   resolve(root, params) {
-    return VehiculeModel.findById(params.id).exec()
+    return VehiculeModel
+      .findById(params.id)
+      .catch(() => {
+        throw new Error('Error while fetching vehicules...')
+      })
   }
 }

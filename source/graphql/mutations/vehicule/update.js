@@ -19,12 +19,12 @@ export default {
     }
   },
   resolve(root, params) {
-    return VehiculeModel.findByIdAndUpdate(params.id, {
-      $set: { ...params.data }
-    }).then(data => {
-      VehiculeModel.findById(data.id).exec()
-    }).catch(err => {
-      throw new Error('Couldn\'t update vehicule data', err)
-    })
+    return VehiculeModel
+      .findByIdAndUpdate(params.id, {
+        $set: { ...params.data }
+      }, { new: true })
+      .catch(() => {
+        throw new Error('Couldn\'t update vehicule data')
+      })
   }
 }

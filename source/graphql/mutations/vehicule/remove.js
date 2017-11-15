@@ -15,10 +15,10 @@ export default {
     }
   },
   resolve(root, params) {
-    const removedVehicule = VehiculeModel.findByIdAndRemove(params.id).exec()
-
-    if (!removedVehicule) throw new Error('Error removing vehicule')
-
-    return removedVehicule
+    return VehiculeModel
+      .findByIdAndRemove(params.id)
+      .catch(() => {
+        throw new Error('Error removing vehicule')
+      })
   }
 }

@@ -34,7 +34,7 @@ export const vehiculeType = new GraphQLObjectType({
 
 export const vehiculeInputType = new GraphQLInputObjectType({
   name: 'VehiculeInput',
-  description: 'Inser Vehicule',
+  description: 'Insert Vehicule',
   fields: () => ({
     brand: {
       type: GraphQLString
