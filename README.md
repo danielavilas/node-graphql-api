@@ -31,26 +31,52 @@ npm start
 The GraphQL client will be hosted on http://localhost:8000/graphql
 
 
-## License
+## Folder Structure
+```bash
 
-MIT License
+├── .eslintrc.js
+├── .gitignore
+├── LICENSE
+├── README.md
+├── package-lock.json
+├── package.json
+├── server.js
+└── source
+    ├── helpers
+    ├── models
+    ├── config
+    │   ├── eslint # Lint config file
+    │   │   ├── rules
+    │   │   └── index.js
+    │   └── index.json # App config file
+    └── graphql
+        ├── mutations
+        ├── queries
+        ├── types
+        └── index.js
+```
 
-Copyright (c) 2017 Daniel Ávila
+## About
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+- This project aims to improve my skills and learn more about some technologies such as GraphQL.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+- Todo list:
+```
+[x] 001: Express Server
+[x] 002: MongoDB
+[x] 003: GraphQL
+[ ] 004: Tests
+  [ ] 001: Unit testing
+  [ ] 002: Integration testing
+  [ ] 003: Testing resolvers
+[ ] 005: More models, queries and mutations (complexity)
+[ ] 006: Auth
+[ ] 007: Deploy
+  [ ] 001: CI
+  [ ] 002: Docker
+  [ ] 003: Heroku
+```
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+
+- License: **MIT** License © [Daniel Ávila](http://github.com/danielavilas).
+```
